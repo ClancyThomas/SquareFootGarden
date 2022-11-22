@@ -36,7 +36,7 @@ class Plant {
         }
 };
 
-// Derived class that will be a parent class for all of the small plants
+// Derived class that will be a class for all of the small plants
 class SmallPlant: public Plant {
     public:
         SmallPlant(string name) {
@@ -46,7 +46,7 @@ class SmallPlant: public Plant {
         }
 };
 
-// Derived class that will be a parent class for all of the medium plants
+// Derived class that will be a class for all of the medium plants
 class MediumPlant: public Plant {
     public:
         MediumPlant(string name) {
@@ -56,7 +56,7 @@ class MediumPlant: public Plant {
         }
 };
 
-// Derived class that will be a parent class for all of the large plants
+// Derived class that will be a class for all of the large plants
 class LargePlant: public Plant {
     public:
         LargePlant(string name) {
@@ -66,12 +66,20 @@ class LargePlant: public Plant {
         }
 };
 
-
+// Function to display the main menu
+void displayMainMenu() {
+    cout << "\n*******************************\n";
+    cout << " 1 - Add a small plant\n";
+    cout << " 2 - Add a medium plant\n";
+    cout << " 3 - Add a large plant\n";
+    cout << " 4 - View plants in the garden\n";
+    cout << " Enter your choice and press return: ";
+}
 
 int main() 
 {
-    Broccoli broccoli;
-    cout << carrot.getLength() << " length" <<endl;
-    cout << carrot.getName() << " name" <<endl;
+    
     return 0;
 }
+
+
