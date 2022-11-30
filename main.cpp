@@ -3,6 +3,9 @@
 
 using namespace std;
 
+void displayMainMenu();
+void displaySmallPlantMenu();
+
 // Parent class that will be used for all the other plants
 class Plant {
 
@@ -67,18 +70,54 @@ class LargePlant: public Plant {
 };
 
 // Function to display the main menu
+void displaySmallPlantMenu() {
+    int choice;
+
+    cout << "\n*******************************\n";
+    cout << " 1 - Add a carrot\n";
+    cout << " 2 - Add a radish\n";
+    cout << " 3 - Add a pea\n";
+    cout << " 4 - View plants in the garden\n";
+    cout << " 5 - Return to main menu\n";
+    cout << "\n*******************************\n";
+    cout << " Enter your choice and press return: ";
+
+    cin >> choice;
+
+    switch(choice) {
+        case 5:
+            displayMainMenu();
+            break;
+    }
+}
+
+// Function to display the main menu
 void displayMainMenu() {
+    int choice;
+
     cout << "\n*******************************\n";
     cout << " 1 - Add a small plant\n";
     cout << " 2 - Add a medium plant\n";
     cout << " 3 - Add a large plant\n";
     cout << " 4 - View plants in the garden\n";
+    cout << " 5 - Exit the program\n";
+    cout << "\n*******************************\n";
     cout << " Enter your choice and press return: ";
+
+    cin >> choice;
+
+    switch(choice) {
+        case 1:
+            displaySmallPlantMenu();
+            break;
+        case 5:
+            break;
+    }
 }
 
 int main() 
 {
-    
+    displayMainMenu();
     return 0;
 }
 
