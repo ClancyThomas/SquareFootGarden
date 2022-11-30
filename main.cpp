@@ -3,10 +3,6 @@
 
 using namespace std;
 
-// Define menu functions to be used later
-void displayMainMenu();
-void displaySmallPlantMenu();
-
 // Parent class that will be used for all the other plants
 class Plant {
 
@@ -70,10 +66,29 @@ class LargePlant: public Plant {
         }
 };
 
+// Class to represent the garden and handle adding plants to it
+class Garden {
+
+    vector<SmallPlant> smallPlants;
+    vector<MediumPlant> mediumPlants;
+    vector<LargePlant> largePlants;
+
+    public:
+        void addSmallPlant(SmallPlant plant) {
+            smallPlants.push_back(plant);
+        }
+
+};
+
+// Define menu functions to be used later
+void displayMainMenu(Garden);
+void displaySmallPlantMenu(Garden);
+
 // Function to display the small plant menu
-void displaySmallPlantMenu() {
+void displaySmallPlantMenu(Garden garden) {
     int choice;
 
+    cout << "\n SMALL PLANT MENU";
     cout << "\n*******************************\n";
     cout << " 1 - Add a carrot\n";
     cout << " 2 - Add a radish\n";
@@ -85,17 +100,20 @@ void displaySmallPlantMenu() {
 
     cin >> choice;
 
-    switch(choice) {
-        case 5:
-            displayMainMenu();
-            break;
+    if(choice==1) {
+        SmallPlant carrot("Carrot");
+        garden.addSmallPlant(carrot);
     }
+    else if(choice==5) {
+        displayMainMenu(garden);
+    }
+            
 }
 
 // Function to display the main menu
-void displayMainMenu() {
+void displayMainMenu(Garden garden) {
     int choice;
-
+    cout << "\n MAIN MENU";
     cout << "\n*******************************\n";
     cout << " 1 - Add a small plant\n";
     cout << " 2 - Add a medium plant\n";
@@ -109,7 +127,7 @@ void displayMainMenu() {
 
     switch(choice) {
         case 1:
-            displaySmallPlantMenu();
+            displaySmallPlantMenu(garden);
             break;
         case 5:
             break;
@@ -118,7 +136,8 @@ void displayMainMenu() {
 
 int main() 
 {
-    displayMainMenu();
+    Garden garden;
+    displayMainMenu(garden);
     return 0;
 }
 
