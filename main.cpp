@@ -111,6 +111,8 @@ class Garden {
 // Define menu functions to be used later
 void displayMainMenu(Garden);
 void displaySmallPlantMenu(Garden);
+void displayMediumPlantMenu(Garden);
+void displayLargePlantMenu(Garden);
 
 // Function to display the small plant menu
 void displaySmallPlantMenu(Garden garden) {
@@ -139,7 +141,7 @@ void displaySmallPlantMenu(Garden garden) {
         displaySmallPlantMenu(garden);
     }
     else if(choice==3) {
-        SmallPlant pea("pea");
+        SmallPlant pea("Pea");
         garden.addSmallPlant(pea);
         displaySmallPlantMenu(garden);
     }
@@ -149,8 +151,87 @@ void displaySmallPlantMenu(Garden garden) {
     }
     else if(choice==5) {
         displayMainMenu(garden);
+    }          
+}
+
+// Function to display the medium plant menu
+void displayMediumPlantMenu(Garden garden) {
+    int choice;
+
+    cout << "\n MEDIUM PLANT MENU";
+    cout << "\n*******************************\n";
+    cout << " 1 - Add a Cabbage\n";
+    cout << " 2 - Add a Corn\n";
+    cout << " 3 - Add a Tomato\n";
+    cout << " 4 - View medium plants in the garden\n";
+    cout << " 5 - Return to main menu\n";
+    cout << "\n*******************************\n";
+    cout << " Enter your choice and press return: ";
+
+    cin >> choice;
+
+    if(choice==1) {
+        MediumPlant cabbage("Cabbage");
+        garden.addMediumPlant(cabbage);
+        displayMediumPlantMenu(garden);
     }
-            
+    else if(choice==2) {
+        MediumPlant corn("Corn");
+        garden.addMediumPlant(corn);
+        displayMediumPlantMenu(garden);
+    }
+    else if(choice==3) {
+        MediumPlant tomato("Tomato");
+        garden.addMediumPlant(tomato);
+        displayMediumPlantMenu(garden);
+    }
+    else if(choice==4) {
+        garden.printMediumPlants();
+        displayMediumPlantMenu(garden);
+    }
+    else if(choice==5) {
+        displayMainMenu(garden);
+    }          
+}
+
+// Function to display the large plant menu
+void displayLargePlantMenu(Garden garden) {
+    int choice;
+
+    cout << "\n LARGE PLANT MENU";
+    cout << "\n*******************************\n";
+    cout << " 1 - Add a Watermelon\n";
+    cout << " 2 - Add a Zucchini\n";
+    cout << " 3 - Add a Squash\n";
+    cout << " 4 - View large plants in the garden\n";
+    cout << " 5 - Return to main menu\n";
+    cout << "\n*******************************\n";
+    cout << " Enter your choice and press return: ";
+
+    cin >> choice;
+
+    if(choice==1) {
+        LargePlant watermelon("Watermelon");
+        garden.addLargePlant(watermelon);
+        displayLargePlantMenu(garden);
+    }
+    else if(choice==2) {
+        LargePlant zucchini("Zucchini");
+        garden.addLargePlant(zucchini);
+        displayLargePlantMenu(garden);
+    }
+    else if(choice==3) {
+        LargePlant squash("Squash");
+        garden.addLargePlant(squash);
+        displayLargePlantMenu(garden);
+    }
+    else if(choice==4) {
+        garden.printLargePlants();
+        displayLargePlantMenu(garden);
+    }
+    else if(choice==5) {
+        displayMainMenu(garden);
+    }          
 }
 
 // Function to display the main menu
@@ -171,6 +252,12 @@ void displayMainMenu(Garden garden) {
     switch(choice) {
         case 1:
             displaySmallPlantMenu(garden);
+            break;
+        case 2:
+            displayMediumPlantMenu(garden);
+            break;
+        case 3:
+            displayLargePlantMenu(garden);
             break;
         case 4:
             garden.printAllPlants();
