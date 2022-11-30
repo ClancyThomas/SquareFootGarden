@@ -147,7 +147,7 @@ void displaySmallPlantMenu(Garden garden) {
     }
     else if(choice==4) {
         garden.printSmallPlants();
-        displayMainMenu(garden);
+        displaySmallPlantMenu(garden);
     }
     else if(choice==5) {
         displayMainMenu(garden);
@@ -261,7 +261,7 @@ void displayMainMenu(Garden garden) {
             break;
         case 4:
             garden.printAllPlants();
-            displaySmallPlantMenu(garden);
+            displayMainMenu(garden);
             break;
         case 5:
             break;
