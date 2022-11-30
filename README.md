@@ -17,7 +17,7 @@ This project is an attempt to improve on a program that I wrote during my first 
 * [Official Square Foot Gardening Website](https://squarefootgardening.org/)
     * Great overview of what square foot gardening is and the philosophies behind this method of gardening
 * [Information on Square Foot Gardening Spacing](https://simplysmartgardening.com/square-foot-garden-spacing/)
-    * Used these spacing estimates within the program to determine how much space each plant would need
+    * Real estimates of how much space one plant would need with this gardening technique
 
 # Future Work
 
