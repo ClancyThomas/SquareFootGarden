@@ -89,6 +89,23 @@ class Garden {
                 cout << i+1 << ". " << smallPlants[i].getName() << endl;
             }
         }
+        void printMediumPlants() {
+            cout << "######### Medium Plants #########" << endl;
+            for(int i=0; i<mediumPlants.size(); i++) {
+                cout << i+1 << ". " << smallPlants[i].getName() << endl;
+            }
+        }
+        void printLargePlants() {
+            cout << "######### Large Plants #########" << endl;
+            for(int i=0; i<largePlants.size(); i++) {
+                cout << i+1 << ". " << smallPlants[i].getName() << endl;
+            }
+        }
+        void printAllPlants() {
+            printSmallPlants();
+            printMediumPlants();
+            printLargePlants();
+        }
 };
 
 // Define menu functions to be used later
@@ -153,6 +170,10 @@ void displayMainMenu(Garden garden) {
 
     switch(choice) {
         case 1:
+            displaySmallPlantMenu(garden);
+            break;
+        case 4:
+            garden.printAllPlants();
             displaySmallPlantMenu(garden);
             break;
         case 5:
