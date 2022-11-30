@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Define menu functions to be used later
 void displayMainMenu();
 void displaySmallPlantMenu();
 
@@ -69,7 +70,7 @@ class LargePlant: public Plant {
         }
 };
 
-// Function to display the main menu
+// Function to display the small plant menu
 void displaySmallPlantMenu() {
     int choice;
 
