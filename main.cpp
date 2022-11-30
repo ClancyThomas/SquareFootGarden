@@ -116,6 +116,16 @@ void displaySmallPlantMenu(Garden garden) {
         garden.addSmallPlant(carrot);
         displaySmallPlantMenu(garden);
     }
+    else if(choice==2) {
+        SmallPlant radish("Radish");
+        garden.addSmallPlant(radish);
+        displaySmallPlantMenu(garden);
+    }
+    else if(choice==3) {
+        SmallPlant pea("pea");
+        garden.addSmallPlant(pea);
+        displaySmallPlantMenu(garden);
+    }
     else if(choice==4) {
         garden.printSmallPlants();
         displaySmallPlantMenu(garden);
