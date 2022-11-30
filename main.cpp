@@ -77,7 +77,18 @@ class Garden {
         void addSmallPlant(SmallPlant plant) {
             smallPlants.push_back(plant);
         }
-
+        void addMediumPlant(MediumPlant plant) {
+            mediumPlants.push_back(plant);
+        }
+        void addLargePlant(LargePlant plant) {
+            largePlants.push_back(plant);
+        }
+        void printSmallPlants() {
+            cout << "######### Small Plants #########" << endl;
+            for(int i=0; i<smallPlants.size(); i++) {
+                cout << i+1 << ". " << smallPlants[i].getName() << endl;
+            }
+        }
 };
 
 // Define menu functions to be used later
@@ -93,7 +104,7 @@ void displaySmallPlantMenu(Garden garden) {
     cout << " 1 - Add a carrot\n";
     cout << " 2 - Add a radish\n";
     cout << " 3 - Add a pea\n";
-    cout << " 4 - View plants in the garden\n";
+    cout << " 4 - View small plants in the garden\n";
     cout << " 5 - Return to main menu\n";
     cout << "\n*******************************\n";
     cout << " Enter your choice and press return: ";
@@ -103,6 +114,11 @@ void displaySmallPlantMenu(Garden garden) {
     if(choice==1) {
         SmallPlant carrot("Carrot");
         garden.addSmallPlant(carrot);
+        displaySmallPlantMenu(garden);
+    }
+    else if(choice==4) {
+        garden.printSmallPlants();
+        displaySmallPlantMenu(garden);
     }
     else if(choice==5) {
         displayMainMenu(garden);
