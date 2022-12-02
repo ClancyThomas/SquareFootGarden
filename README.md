@@ -4,7 +4,7 @@ Square foot gardening is a method of gardening where plants are grown using a sq
 
 This project is an attempt to improve on a program that I wrote during my first year of programming. I remembered the idea of the project, but I had since deleted the source code so I wanted to recreate the project and improve the way that I wrote the code and what the program could do. 
 
-[Software Demo Video]()
+[Software Demo Video](https://youtu.be/9TaoWuqiex0)
 
 # Development Environment
 
@@ -22,5 +22,7 @@ This project is an attempt to improve on a program that I wrote during my first 
 # Future Work
 
 * Add more plants/options to the menus
+* Add the ability to sort the plants into the ideal layout
+* Suggest which plants should be grown close by each other
 
 
